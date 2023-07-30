@@ -1,3 +1,4 @@
+import 'package:book_glance/pages/discover.dart';
 import 'package:book_glance/pages/profile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -38,10 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     // ignore: prefer_final_fields, no_leading_underscores_for_local_identifiers
     List<Widget> _widgetOptions = <Widget>[
-      const Text(
-        'Index 0: Discover',
-        style: optionStyle,
-      ),
+      DiscoverScreen(user: _user),
       const Text(
         'Index 1: Library',
         style: optionStyle,
